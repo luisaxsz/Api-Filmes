@@ -1,0 +1,9 @@
+services:
+  mysql:
+    image: 'mysql:8.0'
+    container_name: my-db
+    environment:
+      - MYSQL_DATABASE=filmes
+      - MYSQL_ROOT_PASSWORD=root
+    ports:
+      - '3306:3306'
