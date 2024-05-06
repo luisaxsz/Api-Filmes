@@ -1,10 +1,10 @@
 package com.example.ApiFilmes.controller;
 
-import com.example.ApiFilmes.model.Filme;
+import com.example.ApiFilmes.domain.model.Filme;
 import com.example.ApiFilmes.repository.FilmeRepository;
 import com.example.ApiFilmes.service.FilmeService;
+import jakarta.persistence.EntityNotFoundException;
 import lombok.AllArgsConstructor;
-import lombok.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,6 +18,7 @@ public class FilmeController {
     private final FilmeRepository filmeRepository;
     private final FilmeService filmeService;
 
+
     @GetMapping
     public ResponseEntity<List<Filme>> findAll() {
         return ResponseEntity.ok(filmeRepository.findAll());
@@ -25,7 +26,7 @@ public class FilmeController {
 
     @GetMapping("/{id}")
     public ResponseEntity<Filme> findById(@PathVariable Long id) {
-        return ResponseEntity.ok(filmeService.findById(id));
+        return ResponseEntity.ok(filmeRepository.findById(id).orElseThrow(() -> new EntityNotFoundException("Filme não encontrado")));
     }
 
     @PostMapping

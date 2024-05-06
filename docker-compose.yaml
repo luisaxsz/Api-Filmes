@@ -1,9 +1,26 @@
+version: '3.7'
 services:
   mysql:
     image: 'mysql:8.0'
     container_name: my-db
+    restart: always
     environment:
       - MYSQL_DATABASE=filmes
+#      - MYSQL_USER=root1
+#      - MYSQL_PASSWORD=root
       - MYSQL_ROOT_PASSWORD=root
+    volumes:
+      - ./mysql:/var/lib/mysql
     ports:
       - '3306:3306'
+# Erro: Subindo na frente do banco de dados -> erro comunicação
+#  backend:
+#    build:
+#      context: .
+#      dockerfile: Dockerfile
+#    container_name: my-backend
+#    ports:
+#      - '8080:8080'
+#    depends_on:
+#      - mysql
+#    restart: on-failure

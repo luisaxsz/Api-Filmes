@@ -1,6 +1,5 @@
 package com.example.ApiFilmes.config;
 
-import com.example.ApiFilmes.model.Filme;
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

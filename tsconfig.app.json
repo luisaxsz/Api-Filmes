@@ -10,7 +10,7 @@
     }
   },
   "files": [
-    "src/main.ts",
+    "src/main/webapp/src/main.ts",
     "src/polyfills.ts"
   ],
   "include": [

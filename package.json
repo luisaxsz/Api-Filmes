@@ -2,11 +2,11 @@
   "name": "webapp",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "ng": "src/main/webapp/node_modules/.bin/ng",
+    "start": "src/main/webapp/node_modules/.bin/ng serve",
+    "build": "src/main/webapp/node_modules/.bin/ng build",
+    "watch": "src/main/webapp/node_modules/.bin/ng build --watch --configuration development",
+    "test": "src/main/webapp/node_modules/.bin/ng test"
   },
   "private": true,
   "dependencies": {
