@@ -1,6 +1,7 @@
 # SpringBoot
 
 - Para executar o projeto, é necessário ter o Java 17, Maven e Docker instalados.
+- Essa é uma api básica e simples apenas para utilizar e testar e aprofundar conhecimentos em docker, kubernets e ci/cd com github actions. A api ainda tá passando por alterações alterações. 
 
 ## Inicialize banco de dados
 
