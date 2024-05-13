@@ -1,7 +1,5 @@
-com\example\ApiFilmes\model\Genero.class
+com\example\ApiFilmes\controller\FilmeController.class
 com\example\ApiFilmes\config\ApplicationConfig.class
 com\example\ApiFilmes\repository\FilmeRepository.class
 com\example\ApiFilmes\ApiFilmesApplication.class
 com\example\ApiFilmes\service\FilmeService.class
-com\example\ApiFilmes\controller\FilmeController.class
-com\example\ApiFilmes\model\Filme.class
