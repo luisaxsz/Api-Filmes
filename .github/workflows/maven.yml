@@ -27,6 +27,13 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
+        
+    - name: Build-db
+      run: docker-compose build
+
+    - name: create-db
+      run: docker-compose up
+      
     - name: Build with Maven
       run: mvn -B package --file pom.xml
 
