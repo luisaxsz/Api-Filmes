@@ -7,7 +7,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 @AllArgsConstructor
 @Service
-public class FilmeService {
+public class AtualizarFilmeService {
 
     private final FilmeRepository filmeRepository;
     private final ModelMapper mapper;

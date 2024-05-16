@@ -1,5 +1,13 @@
+com\example\ApiFilmes\domain\model\Genero.class
+com\example\ApiFilmes\domain\model\Filme.class
+com\example\ApiFilmes\repository\GeneroRepository.class
+com\example\ApiFilmes\controller\GeneroController.class
+com\example\ApiFilmes\controller\FilmeListViewController.class
 com\example\ApiFilmes\controller\FilmeController.class
 com\example\ApiFilmes\config\ApplicationConfig.class
 com\example\ApiFilmes\repository\FilmeRepository.class
+com\example\ApiFilmes\service\AtualizarFilmeService.class
+com\example\ApiFilmes\service\AtualizarGeneroService.class
+com\example\ApiFilmes\repository\FilmeListViewRepository.class
 com\example\ApiFilmes\ApiFilmesApplication.class
-com\example\ApiFilmes\service\FilmeService.class
+com\example\ApiFilmes\domain\vw\FilmesListView.class

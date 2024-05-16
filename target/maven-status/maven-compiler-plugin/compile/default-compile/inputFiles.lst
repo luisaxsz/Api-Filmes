@@ -3,11 +3,11 @@ C:\Users\maria\Documents\Projetos_2024\ApiFilmes\src\main\java\com\example\ApiFi
 C:\Users\maria\Documents\Projetos_2024\ApiFilmes\src\main\java\com\example\ApiFilmes\controller\FilmeController.java
 C:\Users\maria\Documents\Projetos_2024\ApiFilmes\src\main\java\com\example\ApiFilmes\repository\GeneroRepository.java
 C:\Users\maria\Documents\Projetos_2024\ApiFilmes\src\main\java\com\example\ApiFilmes\repository\FilmeListViewRepository.java
+C:\Users\maria\Documents\Projetos_2024\ApiFilmes\src\main\java\com\example\ApiFilmes\service\AtualizarGeneroService.java
+C:\Users\maria\Documents\Projetos_2024\ApiFilmes\src\main\java\com\example\ApiFilmes\service\AtualizarFilmeService.java
 C:\Users\maria\Documents\Projetos_2024\ApiFilmes\src\main\java\com\example\ApiFilmes\controller\FilmeListViewController.java
-C:\Users\maria\Documents\Projetos_2024\ApiFilmes\src\main\java\com\example\ApiFilmes\service\GeneroService.java
 C:\Users\maria\Documents\Projetos_2024\ApiFilmes\src\main\java\com\example\ApiFilmes\repository\FilmeRepository.java
 C:\Users\maria\Documents\Projetos_2024\ApiFilmes\src\main\java\com\example\ApiFilmes\domain\vw\FilmesListView.java
 C:\Users\maria\Documents\Projetos_2024\ApiFilmes\src\main\java\com\example\ApiFilmes\config\ApplicationConfig.java
 C:\Users\maria\Documents\Projetos_2024\ApiFilmes\src\main\java\com\example\ApiFilmes\ApiFilmesApplication.java
-C:\Users\maria\Documents\Projetos_2024\ApiFilmes\src\main\java\com\example\ApiFilmes\service\FilmeService.java
 C:\Users\maria\Documents\Projetos_2024\ApiFilmes\src\main\java\com\example\ApiFilmes\controller\GeneroController.java

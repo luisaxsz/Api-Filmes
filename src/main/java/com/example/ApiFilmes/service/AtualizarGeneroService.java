@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 @AllArgsConstructor
-public class GeneroService {
+public class AtualizarGeneroService {
   private final GeneroRepository generoRepository;
   private final ModelMapper mapper;
 

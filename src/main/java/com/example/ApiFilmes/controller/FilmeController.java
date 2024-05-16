@@ -2,7 +2,7 @@ package com.example.ApiFilmes.controller;
 
 import com.example.ApiFilmes.domain.model.Filme;
 import com.example.ApiFilmes.repository.FilmeRepository;
-import com.example.ApiFilmes.service.FilmeService;
+import com.example.ApiFilmes.service.AtualizarFilmeService;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -16,7 +16,7 @@ import java.util.List;
 public class FilmeController {
 
     private final FilmeRepository filmeRepository;
-    private final FilmeService filmeService;
+    private final AtualizarFilmeService atualizarFilmeService;
 
 
     @GetMapping
@@ -36,7 +36,7 @@ public class FilmeController {
 
     @PutMapping("/{id}")
     public ResponseEntity<Filme> update(@PathVariable Long id, @RequestBody Filme filme) {
-        return ResponseEntity.ok(filmeService.update(id, filme));
+        return ResponseEntity.ok(atualizarFilmeService.update(id, filme));
     }
 
     @DeleteMapping("/{id}")

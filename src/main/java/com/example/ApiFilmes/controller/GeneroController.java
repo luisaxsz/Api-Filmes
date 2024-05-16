@@ -2,7 +2,7 @@ package com.example.ApiFilmes.controller;
 
 import com.example.ApiFilmes.domain.model.Genero;
 import com.example.ApiFilmes.repository.GeneroRepository;
-import com.example.ApiFilmes.service.GeneroService;
+import com.example.ApiFilmes.service.AtualizarGeneroService;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -16,7 +16,7 @@ import java.util.List;
 public class GeneroController {
 
   private final GeneroRepository generoRepository;
-  private final GeneroService generoService;
+  private final AtualizarGeneroService atualizarGeneroService;
 
 
   @GetMapping
@@ -36,7 +36,7 @@ public class GeneroController {
 
   @PutMapping("/{id}")
   public ResponseEntity<Genero> update(@PathVariable Long id, @RequestBody Genero genero) {
-    return ResponseEntity.ok(generoService.update(id, genero));
+    return ResponseEntity.ok(atualizarGeneroService.update(id, genero));
   }
 
   @DeleteMapping("/{id}")
