@@ -26,9 +26,6 @@ docker:
 build_job:
   image: maven:latest
   stage: build
-  before_script:
-    - apt-get update
-    - apt-get install maven
   script:
     - mvn clean install -DskipTests=true -B
 
