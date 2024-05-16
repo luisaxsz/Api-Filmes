@@ -3,8 +3,6 @@ variables:
 image: maven:latest
 stages:
   - build
-  - package
-  - deploy
 cache:
   paths:
     - .m2/repository
@@ -12,30 +10,10 @@ cache:
 
 build_job:
   stage: build
+  script:
+    - mvn clean install -DskipTests=true -B
   tags:
     - docker
-
-  script:
-    - echo "Maven compile started"
-    - mvn compile
-
-
-#test_job:
-#  stage: test
-#  tags:
-#    - docker
-#
-#  script:
-#    - echo "Maven test started"
-#    - mvn test
-
-package_job:
-  stage: package
-  tags:
-    - docker
-  script:
-    - echo "Maven package started"
-    - mvn package -DskipTests=true
 
 Deploy_job:
   stage: deploy
