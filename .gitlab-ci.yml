@@ -3,6 +3,7 @@ variables:
 image: maven:latest
 stages:
   - build
+  - deploy
 cache:
   paths:
     - .m2/repository
