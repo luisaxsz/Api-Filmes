@@ -27,7 +27,7 @@ build_job:
   image: maven:latest
   stage: build
   script:
-    - mvn package -DskipTests=true -B
+    - mvn clean install -DskipTests=true -B
 
 Deploy_job:
   stage: deploy
