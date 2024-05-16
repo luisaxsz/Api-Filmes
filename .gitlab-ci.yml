@@ -17,22 +17,22 @@ docker:
   image: docker/compose:latest
   services:
     - docker:dind
-  script:
+  before_script:
     - docker info
+  script:
+    - docker-compose build
+    - docker-compose up -d
 
 build_job:
   image: maven:latest
   stage: build
+  before_script:
+    - apt-get update
+    - apt-get install maven
   script:
-    - docker-compose build
-    - docker-compose up -d
     - mvn clean install -DskipTests=true -B
-  tags:
-    - docker
 
 Deploy_job:
   stage: deploy
-  tags:
-    - docker
   script:
     - echo "Maven deploy started"
