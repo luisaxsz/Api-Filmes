@@ -1,17 +1,31 @@
 variables:
   MAVEN_OPTS: -Dmaven.repo.local=.m2/repository
-image: maven:latest
+  DOCKER_HOST: tcp://docker:2375/
+  DOCKER_DRIVER: overlay2
+
 stages:
+  - docker
   - build
   - deploy
+
 cache:
   paths:
     - .m2/repository
     - target
+docker:
+  stage: docker
+  image: docker/compose:latest
+  services:
+    - docker:dind
+  before_script:
+    - docker info
 
 build_job:
+  image: maven:latest
   stage: build
   script:
+    - docker-compose build
+    - docker-compose up -d
     - mvn clean install -DskipTests=true -B
   tags:
     - docker
