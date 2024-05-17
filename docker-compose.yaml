@@ -13,11 +13,11 @@ services:
       - ./mysql:/var/lib/mysql
     ports:
       - '3307:3306'
-#  sonarqube:
-#    image: 'sonarqube:9.9.0-community'
-#    container_name: sonarqube
-#    ports:
-#      - '9000:9000'
+  sonarqube:
+    image: 'sonarqube:9.9.0-community'
+    container_name: sonarqube
+    ports:
+      - '9000:9000'
 # Erro: Subindo na frente do banco de dados -> erro comunicação
 #  backend:
 #    build:
