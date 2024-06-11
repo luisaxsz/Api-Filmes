@@ -4,8 +4,8 @@ variables:
   DOCKER_DRIVER: overlay2
 
 stages:
+  - teste
   - docker
-  - sonarqube
   - build
   - deploy
 
@@ -13,6 +13,12 @@ cache:
   paths:
     - .m2/repository
     - target
+
+teste:
+  stage: teste
+  script:
+    - mvn test
+
 docker:
   stage: docker
   image: docker/compose:latest
@@ -28,7 +34,7 @@ build_job:
   image: maven:latest
   stage: build
   script:
-    - mvn clean install -DskipTests=true -B
+    - mvn clean install -B
 
 Deploy_job:
   stage: deploy
@@ -44,7 +50,7 @@ sonarqube-check:
     key: "${CI_JOB_NAME}"
     paths:
       - .sonar/cache
-  script: 
+  script:
     - mvn verify sonar:sonar -Dsonar.projectKey=luisaxsz_teste-sonar_AY-Gg417EmMt-V_aGEIY
   allow_failure: true
   only:
