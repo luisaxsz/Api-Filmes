@@ -12,7 +12,7 @@ public class AtualizarFilmeService {
     private final FilmeRepository filmeRepository;
     private final ModelMapper mapper;
 
-    public Filme update(Long id,Filme filmeAtualizado){
+    public Filme exec(Integer id,Filme filmeAtualizado){
         var filme = filmeRepository.findById(id).orElseThrow(() -> new EntityNotFoundException("Filme não encontrado"));
         filmeAtualizado.setId(id);
         mapper.map(filmeAtualizado, filme);

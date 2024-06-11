@@ -11,6 +11,6 @@ public class EntityNotFoundExceptionHandler{
 
   @ExceptionHandler(EntityNotFoundException.class)
   public ResponseEntity<String> handleEntityNotFoundException(EntityNotFoundException ex) {
-    return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Filme não encontrado");
+    return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Id não encontrado!");
   }
 }

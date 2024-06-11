@@ -25,8 +25,8 @@ public class GeneroController {
   }
 
   @GetMapping("/{id}")
-  public ResponseEntity<Genero> findById(@PathVariable Long id) {
-    return ResponseEntity.ok(generoRepository.findById(id).orElseThrow(() -> new EntityNotFoundException("Genero não encontrado")));
+  public ResponseEntity<Genero> findById(@PathVariable Integer id) {
+    return ResponseEntity.ok(generoRepository.findById(id).orElseThrow(EntityNotFoundException::new));
   }
 
   @PostMapping
@@ -35,16 +35,16 @@ public class GeneroController {
   }
 
   @PutMapping("/{id}")
-  public ResponseEntity<Genero> update(@PathVariable Long id, @RequestBody Genero genero) {
-    return ResponseEntity.ok(atualizarGeneroService.update(id, genero));
+  public ResponseEntity<Genero> update(@PathVariable Integer id, @RequestBody Genero genero) {
+    return ResponseEntity.ok(atualizarGeneroService.exec(id, genero));
   }
 
   @DeleteMapping("/{id}")
-  public ResponseEntity<Genero> delete(@PathVariable Long id) {
+  public ResponseEntity<Genero> delete(@PathVariable Integer id) {
     if (generoRepository.existsById(id)) {
       generoRepository.deleteById(id);
       return ResponseEntity.ok().build();
     }
-    return ResponseEntity.notFound().build();
+    throw new EntityNotFoundException();
   }
 }

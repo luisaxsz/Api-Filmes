@@ -1,4 +1,5 @@
 com\example\ApiFilmes\domain\model\Genero.class
+com\example\ApiFilmes\exception\EntityNotFoundExceptionHandler.class
 com\example\ApiFilmes\domain\model\Filme.class
 com\example\ApiFilmes\repository\GeneroRepository.class
 com\example\ApiFilmes\controller\GeneroController.class

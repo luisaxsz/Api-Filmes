@@ -13,7 +13,7 @@ public class AtualizarGeneroService {
   private final GeneroRepository generoRepository;
   private final ModelMapper mapper;
 
-  public Genero update(Long id, Genero generoAtualizado){
+  public Genero exec(Integer id, Genero generoAtualizado){
     var genero = generoRepository.findById(id).orElseThrow(() -> new EntityNotFoundException("Filme não encontrado"));
     generoAtualizado.setId(id);
     mapper.map(generoAtualizado, genero);

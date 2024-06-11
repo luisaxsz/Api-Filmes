@@ -18,7 +18,7 @@ import org.hibernate.annotations.Subselect;
 public class FilmesListView {
 
   @Id
-  private  Long id;
+  private  Integer id;
   private  String nome;
   private  String diretor;
   private  String duracao;
