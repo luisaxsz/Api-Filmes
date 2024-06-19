@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,23 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'webapp';
+  isDrawerOpen = false;
+
+  navigation = [
+    {
+      text: "Filmes",
+      icon: "home",
+      navigateTo: "/filme"
+    }
+  ]
+
+  toolbarContent = [{
+    widget: 'dxButton',
+    location: 'before',
+    options: {
+      icon: 'menu',
+      stylingMode: 'text',
+      onClick: () => this.isDrawerOpen = !this.isDrawerOpen,
+    },
+  }];
 }
