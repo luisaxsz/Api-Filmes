@@ -1,1 +1,10 @@
-<dx-button text="teste"></dx-button>
+<h1>DATAGRID FILMES</h1>
+<dx-data-grid
+  id="gridContainer"
+  [dataSource]="dataSource"
+  [showBorders]="true"
+  [remoteOperations]="true"
+>
+<dxi-column dataField="nome" dataType="string"></dxi-column>
+
+</dx-data-grid>

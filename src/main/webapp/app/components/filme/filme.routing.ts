@@ -1,5 +1,6 @@
 import {FilmeComponent} from "./filme.component";
 import {Routes} from "@angular/router";
+import {FilmeDataGridComponent} from "./filme-data-grid/filme-data-grid.component";
 
 export const FILME_ROUTES: Routes = [{
   path: '',
@@ -7,7 +8,7 @@ export const FILME_ROUTES: Routes = [{
   children: [
     {
       path: 'filme',
-      component: FilmeComponent
+      component: FilmeDataGridComponent
     },
     {
       path: 'filme/:id'

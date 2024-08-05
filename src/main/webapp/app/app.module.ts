@@ -17,6 +17,7 @@ import {DxDrawerModule, DxListModule, DxToolbarModule} from "devextreme-angular"
     DxToolbarModule
   ],
   providers: [],
+  exports: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

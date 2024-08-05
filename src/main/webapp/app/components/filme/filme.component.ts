@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import {AppModule} from "../../app.module";
 
 @Component({
   selector: 'app-filme',
@@ -8,7 +9,7 @@ import { RouterOutlet } from '@angular/router';
       <router-outlet></router-outlet>
     </main>
   `,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, AppModule],
   standalone: true
 })
 export class FilmeComponent implements OnInit {

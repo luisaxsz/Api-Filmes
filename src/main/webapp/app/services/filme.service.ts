@@ -14,7 +14,7 @@ export class FilmeService {
 
   private readonly API = "http://localhost:8080/api/genero"
 
-  listarTransacoes(): Observable<Filme[]>{
+  listar(): Observable<Filme[]>{
     return this.http.get<Filme[]>(this.API);
   }
 
