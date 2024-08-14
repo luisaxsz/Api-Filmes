@@ -7,23 +7,24 @@ services:
     environment:
       - MYSQL_DATABASE=filmes
       - MYSQL_ROOT_PASSWORD=root
-    volumes:
-      - ./mysql:/var/lib/mysql
     ports:
       - '3307:3306'
-#  sonarqube:
-#    image: 'sonarqube:9.9.0-community'
-#    container_name: sonarqube
-#    ports:
-#      - '9000:9000'
-# Erro: Subindo na frente do banco de dados -> erro comunicação
-#  backend:
-#    build:
-#      context: .
-#      dockerfile: Dockerfile
-#    container_name: my-backend
-#    ports:
-#      - '8080:8080'
-#    depends_on:
-#      - mysql
-#    restart: on-failure
+  keycloak:
+    image: 'quay.io/keycloak/keycloak:25.0.2'
+    container_name: my-keycloak
+    environment:
+      KC_HOSTNAME: localhost
+      KC_HOSTNAME_PORT: 8085
+      KC_HOSTNAME_STRICT: false
+      KC_HOSTNAME_STRICT_HTTPS: false
+
+      KC_LOG_LEVEL: info
+      KC_METRICS_ENABLED: true
+      KC_HEALTH_ENABLED: true
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+    command:
+      - 'start-dev'
+    ports:
+      - 8085:8085
+
