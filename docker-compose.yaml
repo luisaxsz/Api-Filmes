@@ -14,17 +14,12 @@ services:
     container_name: my-keycloak
     environment:
       KC_HOSTNAME: localhost
-      KC_HOSTNAME_PORT: 8085
-      KC_HOSTNAME_STRICT: false
-      KC_HOSTNAME_STRICT_HTTPS: false
-
-      KC_LOG_LEVEL: info
-      KC_METRICS_ENABLED: true
-      KC_HEALTH_ENABLED: true
+      KC_PORT: 8085
       KEYCLOAK_ADMIN: admin
       KEYCLOAK_ADMIN_PASSWORD: admin
+      KC_DB: dev-mem
     command:
-      - 'start-dev'
+      ['start-dev', '--http-port=8085']
     ports:
       - 8085:8085
 
